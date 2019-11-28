@@ -11,5 +11,8 @@ LABEL "com.github.actions.description"="Wraps the Serverless Framework to enable
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@1.54.0
-ENTRYPOINT ["serverless"]
+RUN npm i -g serverless@1.57.0
+COPY "entrypoint.sh" "/entrypoint.sh"
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["--help"]
