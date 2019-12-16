@@ -4,7 +4,7 @@ set -e
 
 if [ -n "$PROJECT_PATH" ]; then
     cd $PROJECT_PATH
-    yarn install
+    ls -l node_modules
 fi
 
 sh -c "serverless $*"
