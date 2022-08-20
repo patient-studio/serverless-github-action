@@ -1,4 +1,4 @@
-FROM node:12-slim
+FROM node:16-slim
 
 
 LABEL version="1.0.0"
@@ -11,7 +11,7 @@ LABEL "com.github.actions.description"="Wraps the Serverless Framework to enable
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@1.73.1
+RUN npm i -g serverless@3.15.0
 COPY "entrypoint.sh" "/entrypoint.sh"
 
 ENTRYPOINT ["/entrypoint.sh"]
